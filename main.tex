@@ -1,0 +1,152 @@
+\documentclass[12pt, oneside, a4paper, dvipdfm fleqn]{article}
+\usepackage{natbib}
+	    
+\usepackage[utf8x]{inputenc}
+\usepackage[brazil]{babel}
+\usepackage{indentfirst}		% Indenta o primeiro parágrafo de cada seção.
+\usepackage{nomencl} 			% Lista de simbolos
+\usepackage{color}				% Controle das cores
+\usepackage{graphicx}			% Inclusão de gráficos
+\usepackage{microtype} 			% para melhorias de justificação
+\usepackage[dvipsnames]{xcolor,colortbl}
+\usepackage{adjustbox}
+\usepackage{svg}
+\usepackage{hyperref}
+\usepackage{graphicx,color}
+\usepackage{graphicx,url}
+
+\usepackage{listings}
+\usepackage{caption,multicol,booktabs,array}
+
+\hypersetup{
+	colorlinks = true, % false: boxed links; true: colored links
+	linkcolor = orange, % cor para links
+	citecolor = orange, % cor para links em bibliografia
+	urlcolor= orange, % cor da url na bibliografia
+	}
+\usepackage{float}
+ 
+\usepackage{amssymb}
+\usepackage{amsmath}
+
+\usepackage{lipsum}			
+\usepackage{verbatim}
+\usepackage{setspace}
+\usepackage{listing}
+
+\definecolor{darkgray}{rgb}{.4,.4,.4}
+\definecolor{purple}{rgb}{0.65, 0.12, 0.82}
+\definecolor{azulzinho}{rgb}{0.36, 0.54, 0.66}
+\lstdefinelanguage{WSML}{
+keywords={ontology, wsmlVariant, namespace, ofType, subConceptOf, concept, axiom, hasValue, definedBy, memberOf, instance, relation, relationInstance,  and},
+keywordstyle=\color{purple}\bfseries,
+ndkeywords={class, export, boolean, throw, implements, import, this,x,?},
+ndkeywordstyle=\color{red}\bfseries,
+identifierstyle=\color{black},
+sensitive=false,
+comment=[l]{//},
+morecomment=[s]{"}{"},
+commentstyle=\color{blue}\ttfamily,
+stringstyle=\color{azulzinho}\ttfamily,
+morestring=[b]',
+morestring=[b]"
+}
+
+\lstset{
+language=WSML,
+extendedchars=true,
+frame = single,
+basicstyle=\scriptsize\ttfamily,
+showstringspaces=false,
+showspaces=false,
+numbers=left,
+numberstyle=\scriptsize,
+numbersep=9pt,
+xleftmargin=.05\textwidth, 
+xrightmargin=.05\textwidth,
+tabsize=2,
+breaklines=true,
+showtabs=false,
+captionpos=b
+}
+
+
+\doublespacing
+%\onehalfspacing
+
+\RequirePackage[a4paper,top=3.5cm,left=3cm,right=3cm,bottom=2.5cm]{geometry}
+
+\parindent 0em
+
+% O tamanho do parágrafo é dado por:
+\setlength{\parindent}{1.3cm}
+
+% Controle do espaçamento entre um parágrafo e outro:
+%\setlength{\parskip}{0.2cm}  % tente também \onelineskip
+\interfootnotelinepenalty=10000 
+\begin{document}
+
+\noindent\textbf{Universidade Federal de Sergipe} \\
+\textbf{Campus Prof. Alberto Carvalho}   \\
+\textbf{Departamento de Sistemas de Informação} \\
+
+\noindent\textbf{Título do Projeto}\\
+\textit {Lixeira Inteligente: }Um sistema eficiente para reciclagem de lixo \\
+\noindent\textbf{Orientador:} \textit{Prof. Dr. André Luis Meneses Silva} \\
+\textbf{Alunos:} Arlene De Almeida Pereira Siqueira, Camila Fontes Santos, Laila Esterfane Dos Santos Valença, Marlysson Silva Dantas, Miguel Ferreira França e Vinicius Lima Santos \\
+
+
+% ----------------------
+% ELEMENTOS PRE-TEXTUAIS
+% ----------------------
+
+%-------------------
+
+% -------------------
+% ELEMENTOS TEXTUAIS
+% -------------------
+
+\input{Textuais/01_Introducao.tex}
+\input{Textuais/02_Objetivos_do_Projeto.tex}
+\input{Textuais/03_Referencial_Teorico}
+\input{Textuais/04_Revisao_Bibliografica.tex}
+\input{Textuais/05_Metodologia.tex}
+\input{Textuais/06_Conclusao.tex}
+
+%-------------------
+\bibliography{referencias}
+\bibliographystyle{chicago}
+
+\newpage
+\singlespacing
+\begin{center}
+\bigskip
+\bigskip 
+\bigskip 
+\bigskip 
+\bigskip 
+\bigskip
+Itabaiana, 16 de outubro de 2023
+\bigskip
+\bigskip 
+\bigskip 
+\bigskip 
+\bigskip \\ 
+\rule{7cm}{0.4pt} \\
+Prof. Dr. André Luis Meneses Silva \\
+Assinatura do Orientador
+\bigskip
+\bigskip 
+\bigskip \\
+\rule{7cm}{0.4pt} \\
+Arlene De Almeida Pereira Siqueira\\
+Camila Fontes Santos\\
+Laila Esterfane Dos Santos Valença\\
+Marlysson Silva Dantas\\
+Miguel Ferreira França\\
+Vinicius Lima Santos \\
+Assinatura do Aluno
+\end{center}
+
+
+\end{document}
